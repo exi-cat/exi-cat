@@ -328,26 +328,47 @@ min(9, 4);
  */
 
 // возвращает x в степени y
-let resultNumber;
-function pow(x, y) {
-    x = +prompt('Введи число','');
-    y = +prompt(`Выбрано число: ${x}. В какую степень его возвести?`);
-
-    while ((y == 0) || (y % 1 != 0)) {
-        console.log(y);
-        y = +prompt(` ${y} не натуральное число. Введи целое число больше нуля!`);
-        if(!y) {
-        console.log(y);
-        return alert('Ну и пока, дурень');
+function pow() {
+    let number = +prompt('Введи число', '');
+    let pow = +prompt(`Выбрано число: ${number}. В какую степень его возвести?`);
+    if (!pow) {
+        return;
+    }
+    let exit = false;
+    while (!exit) {
+        
+        if ((pow > 0) && (pow % 1 == 0)) {
+            exit = true;    
+        } else if (!pow) {
+            exit = true;    
+        } else {
+            alert('Ну и пока, дурень');
+            pow = +prompt(` ${pow} не натуральное число. Введи целое число больше нуля!`);
         }
     }
-    resultNumber = x ** y;
-    //return resultNumber;
+
+    let result = number ** pow;
+    return result;
 }
-pow();
-alert(resultNumber);
+
+let resultNumber = pow();
+if (resultNumber === undefined) {
+    alert('nihuja'); 
+} else {
+    alert(resultNumber);
+}
+
+
 
 /* let t = +prompt('egse','');
 console.log(t);
 alert(t); */
 
+/* while (true) {
+    pow = +prompt(` ${pow} не натуральное число. Введи целое число больше нуля!`);
+    if ((pow == 0) || (pow % 1 != 0)) {
+        break;    
+    } else {
+        alert('Ну и пока, дурень');
+    }
+} */
