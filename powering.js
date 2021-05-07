@@ -11,14 +11,11 @@ function askPow() {
     return power;
 }
 
-function checkInputNum(number) {
-    if (number > 0) {
-
-       return true;
-    } else {
+function checkInputNum() {
+    console.log(number);
+    if (number !== Number) {
         number = +prompt('Нужно число, и чтобы оно было больше нуля. Попробуй ещё раз :)');
-        return number;
-    }
+        } 
 }
 
 function checkInputPow(power) {
