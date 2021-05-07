@@ -328,7 +328,7 @@ min(9, 4);
  */
 
 // возвращает x в степени y
-function pow() {
+/* function pow() {
     let number = +prompt('Введи число', '');
     let pow = +prompt(`Выбрано число: ${number}. В какую степень его возвести?`);
     if (!pow) {
@@ -358,7 +358,7 @@ if (resultNumber === undefined) {
     alert(resultNumber);
 }
 
-
+ */
 
 /* let t = +prompt('egse','');
 console.log(t);
@@ -372,3 +372,7 @@ alert(t); */
         alert('Ну и пока, дурень');
     }
 } */
+
+
+let x = 3 ** 1;
+alert(x);
