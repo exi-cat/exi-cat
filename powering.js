@@ -37,7 +37,7 @@ function checkInputPow(power, userName) {
 
     while ( power != Number(power) 
         || (power < 2) 
-        || (power % power == 0) ) {
+        || ((power % 1) != 0) ) {
         power = +prompt(`Нужно целое число, и чтобы оно было 
         больше двойки. Попробуй ещё раз, ${userName} :)`,'');
     } return power;
