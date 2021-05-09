@@ -33,21 +33,28 @@ function showResult() {
 
 showResult(); */
 
-function sum() {
-    let a = 3;
-    let b = 2;
-    return result = a + b;
+function getNumOne() {
+    let first = 3;
+    
+    return first;
 }
-function show() {
-    if (result > 6) {
-        return answer = 'bingo';
-    } else {
-        return answer = 'fail';
-    }
+function getNumTwo() {
+    let second = 2;
+    
+    return second;
 }
+
+function sum(a, b) {
+    let result = a + b;
+    return result;
+}
+
 function main() {
-    sum();
-    show();
+    let firstNum = getNumOne();
+    let secondNum = getNumTwo();
+    let showResuilt = sum(firstNum, secondNum);
+    return showResuilt;
 }
-main();
-console.log(answer);
+console.log(firstNum);
+/* let resultMain = main();
+console.log(resultMain); */
