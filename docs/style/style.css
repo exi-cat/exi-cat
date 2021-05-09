@@ -1,12 +1,13 @@
 button.new {
     background: -moz-linear-gradient(#00BBD6, #EBFFFF);
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff04dd), to(#06f5f5));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
     margin: 50px;
-    padding: 3px 7px;
-    color: #333;
+    padding: 10px 75px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid #666;
+    border: 1px solid rgb(0, 0, 0);
    }
