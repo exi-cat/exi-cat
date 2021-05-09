@@ -7,7 +7,7 @@ function welcome() {
     } else {
         return userName;
     }
-    alert(`Приятно познакомитсья ${userName} =)
+    alert(`Приятно познакомитсья, ${userName} =)
     А теперь давай возведём какое-нибудь число в степень!`);
     return userName;
 }
@@ -37,7 +37,7 @@ function checkInputPow(power, userName) {
 
     while ( power != Number(power) 
         || (power < 2) 
-        || (power % power != 0) ) {
+        || (power % power == 0) ) {
         power = +prompt(`Нужно целое число, и чтобы оно было 
         больше двойки. Попробуй ещё раз, ${userName} :)`,'');
     } return power;
