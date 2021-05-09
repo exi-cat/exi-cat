@@ -27,8 +27,10 @@ function askPow(userName) {
 
 function checkInputNum(number, userName) {
 
-    while (number != Number(number) || number === 0) {
-        number = +prompt(`Нужно число, и чтобы оно было больше нуля.
+    while (number != Number(number) 
+        || (number < 2) 
+        || ((number % 1) != 0)) {
+        number = +prompt(`Нужно целое число, и чтобы оно было больше единицы.
         Попробуй ещё раз, ${userName} :)`,'');
     } return number;
 }
