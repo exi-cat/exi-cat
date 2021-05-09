@@ -1,56 +1,67 @@
-/* alert('Привет! Я умею возводить числа в степень');
-prompt('Меня зовут exi-cat. А тебя?');
- */
+function welcome() {
+
+    alert('Привет! Я умею возводить числа в степень');
+    userName = prompt('Меня зовут exi-cat. А тебя?', '');
+    if (userName == '') {
+        userName = 'Аноним';
+    } else {
+        return userName;
+    }
+    alert(`Приятно познакомитсья ${userName} =)
+    А теперь давай возведём какое-нибудь число в степень!`);
+    return userName;
+}
+
+
 function askNum() {
+
     let number = +prompt('Введи любое целое число');
-    //console.log(number);
     return number;
 }
 
-/* function askPow() {
-    let power = +prompt('Спасибо! А теперь в какую степень мы его возведём?')
-    return power;
-} */
+function askPow(userName) {
 
-function checkInputNum() {
-    while (number != Number) {
-        if (number === Number) {
-            return checknum = number;
-        } else {
-            return checknum = +prompt('Нужно число, и чтобы оно было больше нуля. Попробуй ещё раз :)');
-        }
-    }
+    let power = +prompt(`Спасибо, ${userName}! А теперь в какую степень мы его возведём?`,'')
+    return power;
 }
 
-/* function checkInputPow(power) {
-    if ( (power > 1) && (power % power == 0) ) {
+function checkInputNum(number, userName) {
 
-        return true;
-        } else {
-        power = +prompt('Нужно целое число, и чтобы оно было больше единицы. Попробуй ещё раз :)');
-        return power;
-    }
-} */
+    while (number != Number(number) || number === 0) {
+        number = +prompt(`Нужно число, и чтобы оно было больше нуля.
+        Попробуй ещё раз, ${userName} :)`,'');
+    } return number;
+}
 
-/* function calculate(number, power) {
+function checkInputPow(power, userName) {
+
+    while ( power != Number(power) 
+        || (power < 2) 
+        || (power % power != 0) ) {
+        power = +prompt(`Нужно целое число, и чтобы оно было 
+        больше двойки. Попробуй ещё раз, ${userName} :)`,'');
+    } return power;
+}
+
+function calculate(number, power) {
 
     return number ** power;
-} */
-
-function showResult() {
-    askNum();
-    console.log(number);
-
-    checkInputNum();
-    
-   /*  power = askPow();
-    checkInputPow(power);
-    // confirm('Что-то пошло не так. Попробуем ещё раз?')
-
-    result = calculate(number, power);
-    alert(result); */
-        
 }
 
-showResult();
-console.log(checknum);
+function showResult() {
+
+    let userName = welcome();
+    let number = askNum();
+
+    number = checkInputNum(number, userName);
+    let power = askPow(userName);
+    power = checkInputPow(power, userName);
+    
+    if (result = calculate(number, power)) {
+        alert(`Вуаля, ${userName}! Ответ: ${result}. Жмякни на кнопку ещё раз, чтобы повторить ;)`);
+
+    } else {
+        let retry = confirm(`Что-то пошло не так ${userName}. Попробуем ещё раз?`);
+        retry = showResult();
+    }
+}
